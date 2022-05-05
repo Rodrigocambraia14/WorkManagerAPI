@@ -26,4 +26,8 @@
     <ProjectReference Include="..\WM.Infra.Context.Persistence\WM.Infra.Context.Persistence.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
 </Project>
