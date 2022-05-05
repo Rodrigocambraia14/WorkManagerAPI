@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WM.CrossCutting.Helper
 {
-    public class ContractResponse
+    public class ContractResponse : IContractResponse
     {
         public bool Valid { get; set; }
 
