@@ -49,7 +49,7 @@ namespace WM.Context.Default.Mappings
                    .IsRequired();
 
             builder.Property(e => e.Name)
-                   .HasColumnType("nvachar")
+                   .HasColumnType("nvarchar")
                    .HasMaxLength(200)
                    .IsRequired();
 
