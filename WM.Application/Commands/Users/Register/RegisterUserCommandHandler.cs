@@ -45,7 +45,7 @@ namespace WM.Application.Commands.Users.Register
             {
                 await this.userManager.AddToRoleAsync(user, nameof(command.UserType));
 
-                return ContractResponse.ValidContractResult("Conta criada com sucesso !");
+                return ContractResponse.ValidContractResponse("Conta criada com sucesso !");
             }
             else
                 throw new Exception("Não foi possível finalizar a criação de conta, tente novamente mais tarde !");

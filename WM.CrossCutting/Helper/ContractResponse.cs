@@ -25,22 +25,22 @@ namespace WM.CrossCutting.Helper
             Data = data;
         }
 
-        public static ContractResponse InvalidContractResult(string message)
+        public static ContractResponse InvalidContractResponse(string message)
         {
             return new ContractResponse(valid: false, message);
         }
 
-        public static ContractResponse InvalidContractResult(string message, object data)
+        public static ContractResponse InvalidContractResponse(string message, object data)
         {
             return new ContractResponse(valid: false, message, data);
         }
 
-        public static ContractResponse ValidContractResult(string message, object data)
+        public static ContractResponse ValidContractResponse(string message, object data)
         {
             return new ContractResponse(valid: true, message, data);
         }
 
-        public static ContractResponse ValidContractResult(string message)
+        public static ContractResponse ValidContractResponse(string message)
         {
             return new ContractResponse(valid: true, message);
         }
