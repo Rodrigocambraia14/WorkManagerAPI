@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\WM.CrossCutting\WM.CrossCutting.csproj" />
+    <ProjectReference Include="..\WM.Infra.Context.Persistence\WM.Infra.Context.Persistence.csproj" />
   </ItemGroup>
 
 </Project>

@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using WM.CrossCutting.Helper;
 
-namespace WM.Application.Commands.User.Login
+namespace WM.Application.Commands.Users.Login
 {
     public class LoginUserCommand : IRequest<IContractResponse>
     {
