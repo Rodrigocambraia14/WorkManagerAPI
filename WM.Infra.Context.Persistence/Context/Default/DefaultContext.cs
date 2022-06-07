@@ -45,7 +45,7 @@ namespace WM.Infra.Context.Persistence.Context.Default
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var connectionstring = this.configuration.GetConnectionString("DefaultConnection");
+            var connectionstring = this.configuration.GetConnectionString("DefaultConnectionString");
             optionsBuilder.UseSqlServer(connectionstring);
 
             base.OnConfiguring(optionsBuilder);

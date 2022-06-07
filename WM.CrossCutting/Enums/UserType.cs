@@ -9,10 +9,10 @@ namespace WM.CrossCutting.Enums
 {
     public enum UserType
     {
-        [Description("Gestor")]
-        Manager = 1,
+        [Description("Admin")]
+        Admin = 1,
 
-        [Description("Funcionário")]
-        Employee = 2
+        [Description("Usuario")]
+        User = 2
     }
 }

@@ -1,11 +1,17 @@
+using MediatR;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.EntityFrameworkCore;
 using System.Globalization;
+using WM.Application.Commands.Users;
+using WM.Application.Commands.Users.Login;
 using WM.Infra.Context.Persistence.Context.Default;
+using WM.Infra.Ioc;
+using WorkManagerAPI.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+ResolveDependencyInjection.RegisterServices(builder.Services, builder.Configuration);
 
 builder.Services.AddCors(
                 options =>
@@ -22,12 +28,21 @@ builder.Services.AddCors(
 builder.Services.AddControllers();
 builder.Services.AddDbContext<DefaultContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectionString"));
 });
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
+
+builder.Services.AddAutoMapper(typeof(UserCommandProfile));
+builder.Services.AddMediatR(typeof(LoginUserCommand).Assembly);
+//builder.Services.AddValidatorsFromAssembly(typeof(LoginUserCommandValidator).Assembly);
+
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession();
+
 builder.Services.AddSwaggerGen();
+//builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(RequestValidation<,>));
 
 var app = builder.Build();
 
@@ -64,6 +79,7 @@ app.UseEndpoints(endpoints =>
 {
     endpoints.MapControllers();
 });
+
 //LoadSeeds(app).GetAwaiter().GetResult();
 
 app.UseHttpsRedirection();
