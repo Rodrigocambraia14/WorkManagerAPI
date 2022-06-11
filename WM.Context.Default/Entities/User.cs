@@ -10,7 +10,7 @@ namespace WM.Context.Default.Entities
 {
     public class User : IdentityUser<Guid>
     {
-        public string Email { get; set; }
+        public override string Email { get; set; }
 
         public string Login { get; set; }
 
@@ -18,7 +18,7 @@ namespace WM.Context.Default.Entities
 
         public string Password { get; set; }
 
-        public string ImageProfile { get; set; }
+        public string? ImageProfile { get; set; }
 
         public UserType UserType { get; set; }
 
