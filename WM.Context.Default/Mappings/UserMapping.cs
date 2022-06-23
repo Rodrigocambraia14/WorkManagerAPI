@@ -59,6 +59,10 @@ namespace WM.Context.Default.Mappings
             builder.HasMany(e => e.UserRoles)
                    .WithOne(e => e.User)
                    .HasForeignKey(e => e.UserId);
+
+            builder.HasMany(e => e.WishLists)
+                  .WithOne(e => e.User)
+                  .HasForeignKey(e => e.UserId);
         }
     }
 }

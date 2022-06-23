@@ -25,5 +25,7 @@ namespace WM.Context.Default.Entities
         public DateTime CreatedDate { get; set; }
 
         public ICollection<UserRole> UserRoles { get; set; }
+
+        public ICollection<WishList> WishLists { get; set; }
     }
 }
