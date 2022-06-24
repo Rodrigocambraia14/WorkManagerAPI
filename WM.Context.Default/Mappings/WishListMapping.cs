@@ -40,9 +40,9 @@ namespace WM.Context.Default.Mappings
             builder.Property(e => e.UserId)
                    .IsRequired();
 
-            builder.HasOne(e => e.User)
-                   .WithMany(e => e.WishLists)
-                   .HasForeignKey(e => e.UserId);
+            builder.HasMany(e => e.WishListUsers)
+                   .WithOne(e => e.WishList)
+                   .HasForeignKey(e => e.WishListId);
 
             builder.HasMany(e => e.Products)
                    .WithOne(e => e.WishList)

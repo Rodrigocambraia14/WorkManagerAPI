@@ -26,6 +26,6 @@ namespace WM.Context.Default.Entities
 
         public ICollection<UserRole> UserRoles { get; set; }
 
-        public ICollection<WishList> WishLists { get; set; }
+        public ICollection<WishListUser> WishListUsers { get; set; }
     }
 }

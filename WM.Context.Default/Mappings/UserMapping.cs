@@ -60,7 +60,7 @@ namespace WM.Context.Default.Mappings
                    .WithOne(e => e.User)
                    .HasForeignKey(e => e.UserId);
 
-            builder.HasMany(e => e.WishLists)
+            builder.HasMany(e => e.WishListUsers)
                   .WithOne(e => e.User)
                   .HasForeignKey(e => e.UserId);
         }
