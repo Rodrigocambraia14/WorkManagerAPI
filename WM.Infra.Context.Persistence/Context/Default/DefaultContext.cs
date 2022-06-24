@@ -34,6 +34,11 @@ namespace WM.Infra.Context.Persistence.Context.Default
 
         public DbSet<UserLogin> UserLogin { get; set; }
 
+        public DbSet<WishList> WishLists { get; set; }
+
+        public DbSet<WishListUser> WishListUsers { get; set; }
+
+        public DbSet<Product> Products { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

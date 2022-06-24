@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Queries\WishList\List\" />
-    <Folder Include="Queries\WishList\Get\" />
+    <Folder Include="Queries\WishLists\List\" />
+    <Folder Include="Queries\WishLists\Get\" />
   </ItemGroup>
 
   <ItemGroup>

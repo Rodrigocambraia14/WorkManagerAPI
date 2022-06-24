@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WM.Application.Commands.WishList.Update
+namespace WM.Application.Commands.WishLists.Update
 {
-    internal class UpdateWishListCommandHandler
+    internal class UpdateWishListCommand
     {
     }
 }

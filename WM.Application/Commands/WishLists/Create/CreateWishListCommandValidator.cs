@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WM.Application.Commands.WishList.Create
+namespace WM.Application.Commands.WishLists.Create
 {
     public class CreateWishListCommandValidator : AbstractValidator<CreateWishListCommand>
     {

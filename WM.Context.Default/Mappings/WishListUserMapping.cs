@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WM.Context.Default.Entities;
+using WM.CrossCutting.Enums;
 
 namespace WM.Context.Default.Mappings
 {
@@ -26,6 +27,15 @@ namespace WM.Context.Default.Mappings
 
             builder.Property(e => e.WishListId)
                    .IsRequired();
+
+            builder.Property(e => e.UserType)
+                   .HasMaxLength(20)
+                   .IsRequired()
+                   .HasColumnType("varchar")
+                   .HasConversion(
+                       v => v.ToString(),
+                       v => (WishListUserType)Enum.Parse(typeof(WishListUserType), v));
+
 
             builder.HasOne(e => e.WishList)
                    .WithMany(e => e.WishListUsers)
