@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using WM.Application.Commands.WishLists.Create;
+using WM.Application.Commands.WishLists.Delete;
 
 namespace WorkManagerAPI.Controllers
 {
@@ -20,6 +21,12 @@ namespace WorkManagerAPI.Controllers
         public async Task<IActionResult> Create([FromBody] CreateWishListCommand command)
         {
             return Created(string.Empty, await this.mediator.Send(command));
+        }
+
+        [HttpDelete("delete")]
+        public async Task<IActionResult> Delete([FromBody] DeleteWishListCommand command)
+        {
+            return Ok(await this.mediator.Send(command));
         }
     }
 }
