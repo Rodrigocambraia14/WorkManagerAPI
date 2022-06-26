@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WM.Application.Commands.WishLists.Update
 {
-    internal class UpdateWishListCommand
+    public class UpdateWishListCommand
     {
     }
 }
