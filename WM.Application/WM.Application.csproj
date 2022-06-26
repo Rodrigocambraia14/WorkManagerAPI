@@ -7,11 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Queries\WishLists\List\" />
-    <Folder Include="Queries\WishLists\Get\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Enums.NET" Version="4.0.0" />
     <PackageReference Include="FluentValidation" Version="11.0.0" />
     <PackageReference Include="MediatR" Version="10.0.1" />
