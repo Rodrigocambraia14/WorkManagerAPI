@@ -18,7 +18,5 @@ namespace WM.Application.Commands.Users.Register
         public string Name { get; set; }
 
         public string Password { get; set; }
-
-        public UserType UserType { get; set; } = UserType.User;
     }
 }

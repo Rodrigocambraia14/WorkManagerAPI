@@ -52,7 +52,7 @@ namespace WM.Application.Commands.Users.Register
 
             if (result.Succeeded)
             {
-                await this.userManager.AddToRoleAsync(user, command.UserType.AsString(EnumFormat.Description));
+                await this.userManager.AddToRoleAsync(user, UserType.User.AsString(EnumFormat.Description));
 
                 return ContractResponse.ValidContractResponse("Conta criada com sucesso !");
             }
